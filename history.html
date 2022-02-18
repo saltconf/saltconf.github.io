@@ -2,39 +2,39 @@
 <html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SALT | history of SALT</title>                                               <!-- modify -->
+  <title>SALT | history of SALT</title>                                   <!-- modify -->
   <link rel="stylesheet" href="salt-site.css" type="text/css" media="screen" />
 </head>
   <body>
     <div class="container" >
-      <div class="row" >
-        <div id="logo-div" >
-          <a href="index.html" id="logo-link"><img src="SALT.png" id="logo" alt="SALT logo"/></a>      <!-- modify -->
+      <div id="logo-div" >
+        <a href="index.html" id="logo-link">
+          <img src="SALT-green.png" id="logo" alt="SALT logo"/></a>   <!-- modify -->
+        <br>
+        <!--<div id="location-div" >
+          <span id="location" >
+            Cornell University
+          </span>
           <br>
-          <!--<div id="location-div" >
-            <span id="location" >
-              Cornell University        
-            </span>
-            <br>
-            <span id="date" class="alert">
-              August 17 &ndash; 20, 2020     
-            </span>
-          </div>-->
-        </div>
+          <span id="date" class="alert">
+            August 17 &ndash; 20, 2020
+          </span>
+        </div>-->
+      </div>
         <div class="row" >
-          <div id="nav" class="three columns" >             <!-- modify section, if you'd like different sections -->
+          <div id="nav" class="three columns" >
+            <!-- modify these tabs with conference information -->
             <ul>
               <li>
-                <a href="https://saltconf.github.io/salt32">Current SALT link</a>
-              </li>
-              <li>
-                <a href="https://journals.linguisticsociety.org/proceedings/index.php/SALT/issue/archive">Proceedings link</a>
-              </li>
+                <a href="index.html">About</a>
               <li>
                 <a href="history.html" class="current">History</a>
               </li>
               <li>
-                <a href="about.html">About</a>
+                <a href="organization.html">Organization</a>
+              </li>
+              <li>
+                <a href="salted.html">SALTED</a>
               </li>
             </ul>
           </div>
@@ -47,10 +47,19 @@
               retrospective page from SALT30</a> for more information. 
             </p>
           <hr>
-          <h2>Previous SALTs</h2> 
+          <style>
+            .program tr:nth-child(5n+1) td {border-bottom-width: 15px;}
+            .program tr:nth-child(10n+1):not(:first-child),
+            .program tr:nth-child(10n  ),
+            .program tr:nth-child(10n-1),
+            .program tr:nth-child(10n-2),
+            .program tr:nth-child(10n-3)
+            {background-color: var(--accent-table-color);}
+          </style>
+          <h2>Previous SALTs</h2>
             <table class="program">
               <tbody>
-                <tr class="talkChairinfo">
+                <tr class="invitedChairinfo">
                   <td class="time">SALT</td>
                   <td class="title">Host and Dates</td>
                   <td class="authors">Invited speakers</td>
@@ -84,7 +93,7 @@
                   <td class="title">UT Austin: February 24-26, 1995<br> 
                   <a href="https://linguistlist.org/issues/6/6-129.html#1">Program</a></td>
                   <td class="authors">Veneeta Dayal, Ray Jackendoff, Stanley Peters, Arnim von Stechow</td>
-                </tr>	
+                </tr>
                 <tr class="poster">
                   <td class="time">SALT6</td>
                   <td class="title">Rutgers: April 26-28, 1996<br> 

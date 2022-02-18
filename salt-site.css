@@ -1,5 +1,15 @@
-/* Created by Dylan Bumford for SALT29 and adapted by Sarah Murray for SALT30 and the perpetual SALT pages. You'll need two/three colors: a main/alert color, an accent color, and a light grey. Dylan used UCLA's colors, and I used Cornell's. For the permanent SALT site, I used red (#8C271E), yellow (#E6AF2E), and grey (#dddddd). Search and replace these codes. Note that in the table row colors, there are two extra characters at the end to set transparency with the hex value. 
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/* This SALT sylesheet makes use of three colors: a main/structure color, a
+ * link/accent color, and an unobtrusive background color. Set these as desired
+ * in the :root block below:
+ */
+
+:root {
+  --main-color: #b35642;
+  --main-table-color: #b3564285; /* adds some transparency*/
+  --accent-color: #528241;
+  --accent-table-color: #5282412e; /* adds some transparency*/
+  --grid-color: #eae9e6;
+}
 
 @font-face {
     font-family: 'Avenir Book';
@@ -32,13 +42,13 @@ body {
 
 a {
     font-weight: 400;
-    color: #E6AF2E;
+    color: var(--accent-color);
     text-decoration: none;
     border-bottom: 1px solid;
 }
 
 a:hover {
-    color: #8C271E;
+    color: var(--main-color);
 }
 
 table.reg tr {
@@ -46,7 +56,7 @@ table.reg tr {
 }
 
 table.reg th {
-    color: #8C271E;
+    color: var(--main-color);
 }
 
 table.reg {
@@ -56,12 +66,12 @@ table.reg {
 
 hr {
     border-style: solid;
-    border-color: #8C271E;
-    border-width: 0.5px;
+    border-color: var(--main-color);
+    border-width: 1px;
 }
 
 .alert {
-    color: #8C271E;
+    color: var(--main-color);
 }
 
 /* Header
@@ -141,12 +151,12 @@ hr {
 }
 
 #nav ul > :first-child {
-    border-top: 1px solid #eae9e6;
+    border-top: 1px solid var(--grid-color);
 }
 
 #nav ul li {
     padding: 0.5em 0em;
-    border-bottom: 1px solid #eae9e6;
+    border-bottom: 1px solid var(--grid-color);
 }
 
 #nav a {
@@ -155,30 +165,38 @@ hr {
 }
 
 #nav a.current {
-    color: #E6AF2E;
+    color: var(--main-color);
+}
+
+#sponsors {
+  margin-top: 1em;
+}
+
+#sponsors p {
+  margin-block-start: 0px;
 }
 
 #lsa-logo {
     width: 50%;
-    margin: 1em 0em;
+    /* margin: 1em 0em; */
 }
 
 #reg-button {
-	display: inline-block;
+  display: inline-block;
   padding: 0.75em 1em;
-	border-radius: 5pt;
-  background-color: #E6AF2E;
-	color: #fff;
-	font-weight: 700;
+  border-radius: 5pt;
+  background-color: var(--accent-color);
+  color: #fff;
+  font-weight: 700;
 }
 
 #reg-button:hover {
-	opacity: 0.85;
+  opacity: 0.85;
   color: #fff;
 }
 
 #reg-button:active {
-	box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
+  box-shadow: inset 0 3px 4px hsla(0, 0%, 0%, 0.2);
 }
 
 
@@ -406,23 +424,23 @@ tr.break, tr.breakShort, tr.lunch, tr.party {
 
 tr.break td, tr.lunch td, tr.party td, tr.breakShort {
     border-top: 10px solid white;
-    /* border-top: 10px solid #8C271E; */
-    /* border-bottom: 10px solid #8C271E; */
+    /* border-top: 10px solid var(--main-color); */
+    /* border-bottom: 10px solid var(--main-color); */
 }
 tr.talk, tr.talkChairinfo {
     /* background-color: #C7D1C5; */
     /* note the 2e at the end indicates transparency */
-    background-color: #E6AF2E2e;
+    background-color: var(--accent-table-color);
 }
 
 /* tr.talk td:first-child, tr.talkChairinfo td:first-child { */
-/*     border-left: 10px solid #8C271E; */
+/*     border-left: 10px solid var(--main-color); */
 /* } */
 /* tr.talk td:last-child, tr.talkChairinfo td:last-child { */
-/*     border-right: 10px solid #8C271E; */
+/*     border-right: 10px solid var(--main-color); */
 /* } */
 /* tr.talkChairinfo td { */
-/*     border-top: 10px solid #8C271E; */
+/*     border-top: 10px solid var(--main-color); */
 /* } */
 
 tr.postertalk, tr.poster {
@@ -430,7 +448,7 @@ tr.postertalk, tr.poster {
 }
 
 tr.posterChairinfo, tr.postertalk, tr.poster {
-    background-color: #dddddd;
+    background-color: var(--grid-color);
 }
 
 tr.invited {
@@ -440,7 +458,7 @@ tr.invited {
 tr.invited, tr.invitedChairinfo {
     /* background-color: #B6B1A9; */
     /* note the 85 at the end indicates transparency */
-    background-color: #8C271E85;
+    background-color: var(--main-table-color);
 }
 
 tr.talkChairinfo, tr.invitedChairinfo, tr.posterChairinfo {
@@ -453,7 +471,7 @@ tr.talkChairinfo td, tr.invitedChairinfo td, tr.posterChairinfo td {
 }
 
 tr.posterInfoLightTwo, tr.posterInfoLightOne {
-    background-color: #dddddd;
+    background-color: var(--grid-color);
     /* background-color: #8FBAC8; */
     /* border-spacing: 0px; */
     /* display: none; */
@@ -471,7 +489,7 @@ tr.posterInfoLightTwo td, tr.posterInfoLightOne td {
     margin-top: 40px;
     padding-top: 20px;
     /* border-bottom: 3px solid #8C271E; */
-    border-top: 3px solid #8C271E;
+    border-top: 3px solid var(--main-color);
 }
 
 .program a {
@@ -482,7 +500,7 @@ tr.posterInfoLightTwo td, tr.posterInfoLightOne td {
 }
 
 span.materials a {
-    color: #E6AF2E;
+    color: var(--accent-color);
 }
 /* .program a:focus, .program a:hover {color:#820000; background-image:none} */
 
