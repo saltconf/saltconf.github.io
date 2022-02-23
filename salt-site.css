@@ -74,6 +74,19 @@ hr {
     color: var(--main-color);
 }
 
+ul[list-title]::before {
+    content: attr(list-title);
+    color: var(--main-color);
+    font-weight: bold;
+    margin-left: -1.25em;
+    display: block;
+    padding-bottom: 0.25em;
+}
+
+ul[list-title] li {
+    list-style: none;
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
