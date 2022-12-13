@@ -281,7 +281,6 @@ ul[list-title] li {
   color: black;
   padding: 0.75em 1em;
   background-color: inherit;
-  text-align: left;
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
@@ -354,6 +353,16 @@ ul[list-title] li {
         padding-top: 0em;
         border-top: none;
     }
+  	.dropdown {
+		text-align: left;		
+	  }
+  	.dropdown .dropbtn {
+	    padding: 1em 0em;
+		text-align: left;				
+  	}
+  	.subnav {
+  		text-align: left;
+	  }
     table.reg {
         width: 75%;
     }
